@@ -1,0 +1,152 @@
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 150px;
+    border: 4px solid #6a0dad;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+    animation: textBounce 1.5s infinite ease-in-out, gradientMove 3s infinite linear;
+    background: linear-gradient(90deg, #6a0dad, #8a2be2, #6a0dad);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+@keyframes textBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+
+
+.social-icons {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+    filter: brightness(1.5);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.intro {
+    width: 80%;
+    max-width: 800px;
+}
+
+.box {
+    background-color: #1e1e1e;
+    border: 2px solid #6a0dad;
+    border-radius: 10px;
+    margin: 15px 0;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(106, 13, 173, 0.8);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+h2 {
+    color: #ffffff;
+    text-transform: uppercase;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #6a0dad;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #8a2be2;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: #8a2be2; 
+    text-align: center;
+    padding: 20px 10px; 
+    margin-top: 50px;
+    border-top: 2px solid #6a0dad; 
+    font-size: 0.9rem;
+    font-family: 'Arial', sans-serif;
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+
+
