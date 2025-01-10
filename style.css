@@ -1,5 +1,5 @@
 body {
-    background-color: #121212;
+    background-color: #121212; 
     color: #ffffff;
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -7,9 +7,25 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     min-height: 100vh;
+    background-image: linear-gradient(45deg, #121212 25%, #000000 50%, #121212 75%);
+    background-size: 400% 400%;
+    animation: backgroundMove 10s ease infinite; 
 }
+
+@keyframes backgroundMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 
 header {
     text-align: center;
@@ -20,32 +36,37 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 50px;
 }
 
 .profile-pic {
     border-radius: 50%;
     width: 150px;
     border: 4px solid #6a0dad;
+    margin-top: 20px;
 }
 
 h1 {
     font-size: 2.5rem;
-    margin: 10px 0;
-    animation: textBounce 1.5s infinite ease-in-out, gradientMove 3s infinite linear;
+    margin: 40px 0;
+    animation: fadeSlideIn 1s ease-out;
     background: linear-gradient(90deg, #6a0dad, #8a2be2, #6a0dad);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
 }
 
-@keyframes textBounce {
-    0%, 100% {
-        transform: translateY(0);
+@keyframes fadeSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); 
     }
-    50% {
-        transform: translateY(-5px);
+    100% {
+        opacity: 1;
+        transform: translateY(0); 
     }
 }
+
 
 @keyframes gradientMove {
     0% {
@@ -146,6 +167,39 @@ footer {
     font-family: 'Arial', sans-serif;
     width: 100%; 
     box-sizing: border-box; 
+}
+
+/* Bouton */
+.btn {
+    padding: 10px 20px;
+    background-color: #6a0dad;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #8a2be2;
+}
+
+
+.forum-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #6a0dad;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.forum-btn:hover {
+    background-color: #8a2be2;
 }
 
 

@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
                 clearInterval(typingEffect);
             }
-        }, 100);
+        }, 30);
     });
 });
+
+
