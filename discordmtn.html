@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Maintenance Discord</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #5865F2, #23272A);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      padding: 40px;
+      background: #2C2F33;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      color: #7289DA;
+      animation: pulse 2s infinite;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      color: #ccc;
+    }
+
+    .loader {
+      border: 6px solid #2C2F33;
+      border-top: 6px solid #7289DA;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      margin: 0 auto;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🚧 Serveur en maintenance</h1>
+    <p>Notre serveur Discord est temporairement hors ligne.<br>Nous travaillons activement pour le remettre en ligne.</p>
+    <div class="loader"></div>
+  </div>
+
+  <script>
+    // Animation supplémentaire : changement de titre toutes les 3 secondes
+    const titles = [
+      "🚧 Serveur en maintenance",
+      "🔧 Mise à jour en cours",
+      "💬 Reviens bientôt !"
+    ];
+    let index = 0;
+    setInterval(() => {
+      document.querySelector("h1").textContent = titles[index];
+      index = (index + 1) % titles.length;
+    }, 3000);
+  </script>
+</body>
+</html>
